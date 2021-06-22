@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
 
-
 :root {
   --bg-1: hsl(263, 55%, 52%);
   --bg-2: hsl(217, 19%, 35%);
@@ -11,15 +10,33 @@
   --text-2: hsl(0, 0%, 81%);
   --text-3: hsl(0, 0%, 81%);
   --text-4: hsl(210, 46%, 95%);
-
-
-
-}
-
-    
+}    
 
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: 400;
   font-size: 13px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 375px;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 40px;
+  align-content: flex-start;
+}
+.user > img {
+  max-width: 40px;
+  height: auto;
+  border-radius: 50%;
 }
