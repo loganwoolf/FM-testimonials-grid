@@ -24,13 +24,19 @@ body {
   display: grid;
   grid-template-columns: auto; /*dependent on text width*/
   justify-content: center; /*center children on screen*/
+	row-gap: 25px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+	padding: 25px 30px;
+	border-radius: 10px;
 }
-.card:nth-child(1) {background-color: var(--bg-1);}
+.card:nth-child(1) {
+	background: url(../images/bg-pattern-quotation.svg) top right no-repeat;
+	background-color: var(--bg-1);
+}
 .card:nth-child(2) {background-color: var(--bg-2);}
 .card:nth-child(3) {background-color: var(--bg-4);}
 .card:nth-child(4) {background-color: var(--bg-3);}
