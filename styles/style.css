@@ -6,11 +6,12 @@
   --bg-3: hsl(219, 29%, 14%);
   --bg-4: hsl(0, 0%, 100%);
   
-  --text-1: hsl(0, 0%, 81%);
-  --text-2: hsl(0, 0%, 81%);
-  --text-3: hsl(0, 0%, 81%);
-  --text-4: hsl(210, 46%, 95%);
-	--page-bg: hsl(212, 43%, 93%);
+  --text-1: hsl(0, 0%, 100%);
+  --text-2: hsl(0, 0%, 100%);
+  --text-3: hsl(0, 0%, 100%);
+  --text-4: hsl(217, 19%, 35%);
+
+  --page-bg: hsl(210, 46%, 95%);
 }    
 
 body {
@@ -33,14 +34,27 @@ body {
 	padding: 25px 30px;
 	border-radius: 10px;
 }
-.card:nth-child(1) {
+
+.bg-quote {
 	background: url(../images/bg-pattern-quotation.svg) top right no-repeat;
-	background-color: var(--bg-1);
+	background-position: 90% 0%; /*move image left from top left*/
 }
-.card:nth-child(2) {background-color: var(--bg-2);}
-.card:nth-child(3) {background-color: var(--bg-4);}
-.card:nth-child(4) {background-color: var(--bg-3);}
-.card:nth-child(5) {background-color: var(--bg-4);}
+.bg-purple {
+	background-color: var(--bg-1);
+	color: var(--text-1);
+}
+.bg-grey {
+	background-color: var(--bg-2);
+	color: var(--text-2);
+}
+.bg-white {
+	background-color: var(--bg-4);
+	color: var(--text-4);
+}
+.bg-blue {
+	background-color: var(--bg-3);
+	color: var(--text-3)
+}
 
 
 .user {
@@ -60,10 +74,13 @@ body {
 }
 .handle {
   padding: 0 0 0 15px;
+	opacity: 50%;
 }
 .card > h2 {
   max-width: 255px;
+	font-weight: 600;
 }
 .card > p {
   max-width: 255px;
+	opacity: 70%;
 }
