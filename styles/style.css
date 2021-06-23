@@ -10,12 +10,14 @@
   --text-2: hsl(0, 0%, 81%);
   --text-3: hsl(0, 0%, 81%);
   --text-4: hsl(210, 46%, 95%);
+	--page-bg: hsl(212, 43%, 93%);
 }    
 
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: 400;
   font-size: 13px;
+	background-color: var(--page-bg);
 }
 
 .grid-container {
