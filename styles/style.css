@@ -20,14 +20,21 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 375px;
-
+  grid-template-columns: auto; /*dependent on text width*/
+  justify-content: center; /*center children on screen*/
 }
 
 .card {
   display: flex;
   flex-direction: column;
 }
+.card:nth-child(1) {background-color: var(--bg-1);}
+.card:nth-child(2) {background-color: var(--bg-2);}
+.card:nth-child(3) {background-color: var(--bg-4);}
+.card:nth-child(4) {background-color: var(--bg-3);}
+.card:nth-child(5) {background-color: var(--bg-4);}
+
+
 .user {
   display: flex;
   flex-direction: column;
