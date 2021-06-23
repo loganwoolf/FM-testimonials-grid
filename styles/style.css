@@ -83,4 +83,5 @@ body {
 .card > p {
   max-width: 255px;
 	opacity: 70%;
+	margin: 0 0 5px;
 }
