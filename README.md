@@ -11,12 +11,8 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,20 +24,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./screenshots/desktop.png)
+![](./screenshots/mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/css-grid-with-span-syntax-and-custom-properties-N7ZniQim5](https://www.frontendmentor.io/solutions/css-grid-with-span-syntax-and-custom-properties-N7ZniQim5)
+- Live Site URL: [https://loganwoolf.github.io/FM-testimonials-grid/](https://loganwoolf.github.io/FM-testimonials-grid/)
 
 ## My process
 
@@ -49,62 +38,64 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- CSS utility classes
 - CSS Grid
+- CSS Flexbox
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
+- Refactored utility functions to color the cards instead of targeting each one separately with child selectors. This saved a lot of repitition.
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div id="card-1" class="card bg-purple bg-quote">
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.bg-quote {
+	background: url(../images/bg-pattern-quotation.svg) top right no-repeat;
+	background-position: 90% 0%; /*move image left from top left*/
+}
+.bg-purple {
+	background-color: var(--bg-1);
+	color: var(--text-1);
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+- Set a fixed height for a flex container to allow avatar to appear next to name and handle. I believe this could be achieved more gracefully with grid span, but it worked out.
+```css
+.user {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 41px;
+  align-content: flex-start;
+}
+.user > img {
+  max-width: 40px;
+  height: auto;
+  border-radius: 50%;
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- Used span syntax to move items around on the grid template. I've since learned you can use span all on its own, along with 
+```css
+grid-auto-flow: row dense; /*was not used in this project*/
+```
+```css
+#card-4 {
+		grid-column: 2 / span 2;
+		grid-row: 2 / span 1;
+	}
+	#card-5 {
+		grid-column: 4 / span 1;
+		grid-row: 1 / span 2;
+	}
+```
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [GRID: Cheatsheet (malven.co)](https://grid.malven.co/) - This is a very useful cheatsheet for CSS Grid.
+- [Grid Practice, a Pen by Logan Woolf](https://codepen.io/loganwoolf/pen/abJgQNw) - I created this little practice pen for placing items with different utility classes on a grid after coding this project.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Logan Woolf](https://loganwoolf.github.io/)
+- Frontend Mentor - [@loganwoolf](https://www.frontendmentor.io/profile/loganwoolf)
+- Twitter - [@logan__woolf](https://www.twitter.com/logan__woolf
